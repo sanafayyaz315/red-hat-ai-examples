@@ -163,7 +163,7 @@ Quantizing activations dynamically involves the following steps:
 | Component / Stage         | Precision Used | Purpose |
 |---------------------------|----------------|---------|
 | Input Activation          | FP16 / BF16    | Input data with numerical stability |
-| Quantization Module         | INT8 / FP8     | Convert activations to low precision |
+| Quantization Step         | INT8 / FP8     | Convert activations to low precision |
 | Weights                   | INT8 / FP8     | Stored quantized model parameters |
 | MatMul (Internal)         | 8-bit × 8-bit  | Fast Tensor Core multiplication |
 | Accumulation (Internal)   | INT32 / FP32   | High-precision accumulation |
