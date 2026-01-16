@@ -2610,7 +2610,7 @@
   ],
   "appState": {
     "gridSize": 20,
-    "gridStep": 5,
+    "gridModule": 5,
     "gridModeEnabled": false,
     "viewBackgroundColor": "#ffffff",
     "lockedMultiSelections": {}
