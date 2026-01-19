@@ -7,7 +7,7 @@ You can deploy a compressed model by using a vLLM inference server.
 
 ## Prerequisites
 
-* You completed modules 1-6 in the `model-serve-flow` project.
+* You completed the previous modules in the `model-serve-flow` project.
 * You have installed the `curl` utility or Python and the OpenAPI SDK.
 
 ## Procedure

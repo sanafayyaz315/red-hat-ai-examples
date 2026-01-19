@@ -32,7 +32,7 @@ For more information about compression and quantization, see [Compress a Large L
 
 ### Prerequisites
 
-* You completed the [Setup steps](../00_Setup/00_Setup_README.md).
+* You completed the previous modules in the `model-serve-flow` project.
 
 * The base model (`RedHatAI/Llama-3.1-8B-Instruct`) is in the `model-serve-flow/base_model/` folder.
 

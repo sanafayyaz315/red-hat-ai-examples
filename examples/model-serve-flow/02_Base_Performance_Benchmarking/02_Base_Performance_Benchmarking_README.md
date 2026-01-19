@@ -22,7 +22,7 @@ For details on system-level performance benchmarking and GuideLLM, see [Performa
 
 ### Prerequisites
 
-* You completed the [Setup steps](../00_Setup/00_Setup_README.md).
+* You completed the previous modules in the `model-serve-flow` project.
 
 * The base model (`RedHatAI/Llama-3.1-8B-Instruct`) is in the `model-serve-flow/base_model/` folder.
 

@@ -8,7 +8,7 @@ The following procedure describes how to deploy the compressed model on your Ope
 
 ## Prerequisites
 
-* You completed modules 1-6 in the `model-serve-flow` project.
+* You completed the previous modules in the `model-serve-flow` project.
 * You stopped any running workbench that uses the PVC where the compressed model is stored. A PVC cannot be shared between an active workbench and a model deployment.
 * You have installed the `curl` utility or Python and the OpenAPI SDK.
 

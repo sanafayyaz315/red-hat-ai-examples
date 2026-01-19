@@ -22,7 +22,7 @@ For details on evaluating LLMs for accuracy, see [Evaluate the Accuracy of the B
 
 ### Prerequisites
 
-- You completed the [Setup steps](../00_Setup/00_Setup_README.md).
+- You completed the [Setup](../00_Setup/00_Setup_README.md) module.
 
 ### Procedure
 

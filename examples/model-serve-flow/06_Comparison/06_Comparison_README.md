@@ -28,7 +28,7 @@ For your convenience, this module includes two files that summarize the comparis
 
 ### Prerequisites
 
-* You completed modules 1-5 in the `model-serve-flow` project.
+* You completed the previous modules in the `model-serve-flow` project.
 
 ### Procedure
 

@@ -20,8 +20,7 @@ For details on evaluating LLMs for accuracy, see [AcEvaluate the Accuracy of the
 
 ### Prerequisites
 
-* You compressed the base model as described in [Module 3: Model Compression](../03_Model_Compression/03_Model_Compression_README.md).
-
+* You completed the previous modules in the `model-serve-flow` project.
 
 ### Procedure
 

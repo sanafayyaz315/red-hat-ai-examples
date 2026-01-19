@@ -20,7 +20,7 @@ For details on system-level performance benchmarking and GuideLLM, see [Performa
 
 ### Prerequisites
 
-* You compressed the base model as described in [Module 3: Model Compression](../03_Model_Compression/03_Model_Compression_README.md).
+* You completed the previous modules in the `model-serve-flow` project.
 
 ### Procedure
 
