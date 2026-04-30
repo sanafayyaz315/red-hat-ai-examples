@@ -92,26 +92,29 @@ Source repository: `red-hat-data-services/pipelines-components`
 1. Clone the example repository.
 
    a. To clone the example repository to your local environment, run the following command in a terminal window:
+
+      ```bash
+      git clone https://github.com/red-hat-data-services/red-hat-ai-examples.git
       ```
-      $ git clone https://github.com/red-hat-data-services/red-hat-ai-examples.git
-      ```
+
    b. Set your working directory to the `Kubeflow_Pipeline` folder:
 
+      ```bash
+      cd red-hat-ai-examples/examples/knowledge-tuning/Kubeflow_Pipeline
       ```
-      $ cd red-hat-ai-examples/examples/knowledge-tuning/Kubeflow_Pipeline
-      ```
+
 2. Set up the Python environment.
 
    Run the following commands to install these required packages:
 
-   - kfp==2.15.2
-   - kfp-kubernetes>=2.15.2
-   - kfp-components @ git+https://github.com/red-hat-data-services/pipelines-components@main
+   - `kfp==2.15.2`
+   - `kfp-kubernetes>=2.15.2`
+   - `kfp-components @ git+https://github.com/red-hat-data-services/pipelines-components@main`
 
-   ```
-   $ python -m venv .venv
-   $ source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
-   $ pip install -e .
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+   pip install -e .
    ```
 
 3. To use the example pipeline with its default configuration, skip to Step 4.
@@ -128,8 +131,8 @@ Source repository: `red-hat-data-services/pipelines-components`
 
    Before you can define your pipeline in the cluster, you must convert your Python-defined pipeline into YAML format. You can use the Kubeflow Pipelines Software Development Kit to compile your pipeline code into a deployable YAML file for declarative GitOps deployment:
 
-   ```
-   $ python pipeline.py
+   ```bash
+   python pipeline.py
    ```
 
 ### Verification
@@ -178,6 +181,7 @@ After you compile the pipeline, you can import the YAML file and deploy it in Op
     --from-literal=HF_TOKEN="your-huggingface-token" \
     -n <your-namespace>
   ```
+
 - You have configured a pipeline server in OpenShift AI, as described in [Configuring a pipeline server in the Red Hat OpenShift AI documentation](https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/3.3/html-single/working_with_ai_pipelines/index#configuring-a-pipeline-server_ai-pipelines).
 
 ### Procedure
