@@ -15,7 +15,7 @@ To learn more about these execution modes, see the [fine-tuning execution modes 
 
 ## RHOAI compatibility
 
-This example is compatible with RHOAI version 3.3. For a version compatible with RHOAI 3.2 see [this README](../rhoai-3.2/osft/README.md). For RHOAI 3.0 see [this README](../rhoai-3.0/osft/README.md).
+This example is compatible with RHOAI version 3.3. For a version compatible with RHOAI 3.2 see [this README](../../rhoai-3.2/osft/README.md). For RHOAI 3.0 see [this README](../../rhoai-3.0/osft/README.md).
 
 ## Overview
 
@@ -129,7 +129,7 @@ osft(..., use_processed_dataset=True)
 
 | Purpose | Size | Access Mode | Storage Class | Notes |
 |---------|------|-------------|---------------|-------|
-| Shared Storage (PVC) total | 10Gi (Example Default) | RWX | Dynamic provisioner required | Shared between workbench and training pods |
+| Shared Storage (PVC) total | 15Gi (Example Default) | RWX | Dynamic provisioner required | Shared between workbench and training pods |
 
 > [!NOTE]
 >
@@ -183,6 +183,6 @@ osft(..., use_processed_dataset=True)
 
 ### Running the example notebooks
 
-- From the workbench, clone this repository, i.e., `https://red-hat-data-services/red-hat-ai-examples.git`
+- From the workbench, clone this repository, i.e., `https://github.com/red-hat-data-services/red-hat-ai-examples.git`
   ![](./docs/06.png)
 - Navigate to the `examples/fine-tuning/osft` directory and open the [`osft-interactive-notebook.ipynb`](./osft-interactive-notebook.ipynb) notebook or [`osft-distributed.ipynb`](./osft-distributed.ipynb) as required

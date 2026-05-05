@@ -57,7 +57,7 @@ LORA/QLORA supports:
 
 **Note**
 
-- Workbench GPU is optional but recommended for faster model evaluation
+- Workbench GPU is required for interactive mode and optional but recommended for faster model evaluation in distributed mode
 - Evaluation was performed on L40S GPU however, it will work on smaller/larger configurations.
 - Workbench resources and accelerator are configurable in `Create Workbench` view on RHOAI Platform
 
@@ -103,6 +103,6 @@ LORA/QLORA supports:
 
 ### Running the example notebooks
 
-- From the workbench, clone this repository, i.e., `https://red-hat-data-services/red-hat-ai-examples.git`
+- From the workbench, clone this repository, i.e., `https://github.com/red-hat-data-services/red-hat-ai-examples.git`
   ![](./docs/06.png)
 - Navigate to the `examples/fine-tuning/lora` directory and open the [`lora_sft-interactive-notebook.ipynb`](./lora_sft-interactive-notebook.ipynb) notebook.

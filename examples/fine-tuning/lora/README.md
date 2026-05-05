@@ -34,8 +34,8 @@ SELECT AVG(salary) FROM employees WHERE department = 'engineering'
 
 LoRA/QLoRA supports two execution modes:
 
-- **Interactive Notebooks (Single Node Fine Tuning)**: training runs directly in a workbench on a single pod, demonstrated by `lora_sft-interactive-notebook.ipynb`.
-- **Training Jobs (Distributed Fine Tuning with Kubeflow Trainer)**: training runs as distributed jobs across multiple nodes/pods via Kubeflow Trainer, demonstrated by `lora_sft-distributed.ipynb`.
+- **Interactive (single node fine tuning)**: training runs directly in a workbench on a single pod, demonstrated by `lora_sft-interactive-notebook.ipynb`.
+- **Distributed (distributed fine tuning with Kubeflow Trainer)**: training runs as distributed jobs across multiple nodes/pods via Kubeflow Trainer, demonstrated by `lora_sft-distributed.ipynb`.
 
 While workbench setup is similar for both, we highlight specific configuration differences below.
 
@@ -55,7 +55,7 @@ This example is compatible with RHOAI version 3.4. For a version compatible with
 
 ## Hardware requirements
 
-For the workbench image, the example was run on `Training Jupyter Pytorch CUDA Python` and `Training Jupyter Pytorch CPU Python`.
+For the workbench image, the example was run on `Training | Jupyter | PyTorch | CUDA | Python` and `Training | Jupyter | PyTorch | CPU Python`.
 This is a single image serving both as training runtime and jupyter notebook and comes with pre-installed dependencies required
 to seamlessly run fine-tuning jobs.
 
@@ -63,12 +63,12 @@ to seamlessly run fine-tuning jobs.
 
 | Image Type | Use Case | GPU | CPU | Memory | Notes |
 |------------|----------|-----|-----|--------|-------|
-| Training Jupyter Pytorch CUDA Python | NVIDIA GPU training | 1× GPU | 4 cores | 32Gi | Recommended for faster training |
+| Training \| Jupyter \| PyTorch \| CUDA \| Python | NVIDIA GPU training | 2× NVIDIA L40/L40S or equivalent | 4 cores | 32Gi | Recommended for faster training |
 
 > [!NOTE]
 >
-> - **Interactive notebooks (single node fine tuning)** are recommended for smaller training jobs.
-> - For larger training jobs, consider the **training jobs (distributed fine tuning with Kubeflow Trainer)** approach.
+> - **Interactive (single node fine tuning)** is recommended for smaller training jobs.
+> - For larger training jobs, consider the **distributed (distributed fine tuning with Kubeflow Trainer)** approach.
 
 ### Training Job Requirements (Distributed example)
 
@@ -86,8 +86,8 @@ to seamlessly run fine-tuning jobs.
 
 | Image Type | Use Case | GPU | CPU | Memory | Notes |
 |------------|----------|-----|-----|--------|-------|
-| Training Jupyter Pytorch CPU Python | CPU-based evaluation | None | 6 cores | 24Gi | Slower evaluation |
-| Training Jupyter Pytorch CUDA Python | NVIDIA GPU evaluation (Example Default) | 1× GPU | 2 cores | 8Gi | Recommended for faster testing |
+| Training \| Jupyter \| PyTorch \| CPU Python | CPU-based evaluation | None | 6 cores | 24Gi | Slower evaluation |
+| Training \| Jupyter \| PyTorch \| CUDA \| Python | NVIDIA GPU evaluation (Example Default) | 1× GPU | 2 cores | 8Gi | Recommended for faster testing |
 
 > [!NOTE]
 >
@@ -126,7 +126,7 @@ to seamlessly run fine-tuning jobs.
 
 ![](../images/04a.png)
 
-**Step 5.** You may want to add a **Hardware Profile** for reuse within the Workbench settings:
+**Step 5.** Add a new **Hardware Profile** with GPU support for reuse within the Workbench settings:
 
 ![](../images/04b.png)
 
