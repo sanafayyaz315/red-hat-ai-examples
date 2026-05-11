@@ -161,11 +161,11 @@ These images serve both as training runtime and jupyter notebook images and come
 
 ![](../images/04a.png)
 
-**Step 5.** Add a new **Hardware Profile** with GPU support for reuse within the Workbench settings:
+**Step 5.** You may want to create a **Hardware Profile** with GPU support, similar to the one below:
 
 ![](../images/04b.png)
 
-**Step 6.** Select the Hardware profile just created:
+**Step 6.** Select the Hardware profile you want to use:
 
 ![](../images/04c.png)
 
