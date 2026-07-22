@@ -18,9 +18,9 @@ Loops waste tokens, increase latency, and can drive up tool or model cost while 
 
 A travel agent attempts to book flights using `TRAVEL_AGENT_TOOLS`. The notebook creates four traces:
 
-- **Error retry loop (fail):** The user asks for a flight from NYC to Atlantis. The agent calls `search_flights("NYC", "Atlantis", "2026-08-15")` three times and gets the same output each time: `{"error": "no flights available"}`.
-- **Cyclical alternation (fail):** The user asks for a flight from Boston to San Francisco. The agent calls `search_flights("BOS", "SFO", "2026-08-15")`, then `get_flight_details("F100")`, then repeats the same pair again without ever calling `book_flight`.
-- **Semantic loop (fail):** The user asks for a flight from NYC to Atlantis. The agent first calls `search_flights`, then switches to `search_alternative_routes`, then goes back to `search_flights` again. The tools differ, but the failed goal is unchanged.
+- **Error retry loop (fail):** The user asks for a flight from NYC to Atlantis. The agent calls `search_flights("NYC", "Atlantis", "2026-08-15")` three times and gets the same output each time: `{"error": "no flights available"}`. Instead of retrying, the agent should tell the user no flights were found and ask whether they want to confirm or change the destination.
+- **Cyclical alternation (fail):** The user asks for a flight from Boston to San Francisco. The agent calls `search_flights("BOS", "SFO", "2026-08-15")`, then `get_flight_details("F100")`, then repeats the same pair again without ever calling `book_flight`. Instead of revisiting the same result, the agent should either book `F100` once it has enough information or ask the user whether they want a different option.
+- **Semantic loop (fail):** The user asks for a flight from NYC to Atlantis. The agent first calls `search_flights("NYC", "Atlantis", "2026-08-15")`, then switches to `search_alternative_routes("NYC", "Atlantis", "2026-08-15")`, then goes back to `search_flights("NYC", "Atlantis", "2026-08-15")` again. The tools differ, but the failed goal is unchanged. Instead of pursuing the same impossible route, the agent should explain the failure and ask whether the user wants to change the destination, date, or routing constraints.
 - **Normal progression (pass):** The user asks for a flight from Boston to San Francisco. The agent calls `search_flights("BOS", "SFO", "2026-08-15")`, then `get_flight_details("F200")`, then `book_flight("F200")`, and the booking succeeds.
 
 ## Scorers
